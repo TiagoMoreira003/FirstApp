@@ -1,10 +1,12 @@
 package com.alexandre.FirstApp;
 
+import java.util.UUID;
+
 public class Person {
 
     private String name;
     private int age;
-    public int id;
+    public UUID id;
 
     public void setName(String name){
         this.name = name;
@@ -22,10 +24,10 @@ public class Person {
         return age;
     }
 
-    public Person(String name, int age, int id){
+    public Person(String name, int age){
         this.name = name;
         this.age = age;
-        this.id = id;
+        this.id = UUID.randomUUID();
     }
 
     public Person(){}
